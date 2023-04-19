@@ -25,6 +25,7 @@
     background-color: #f56982;
     background-size: 100%;
     background-image: linear-gradient(to bottom, #f2395a, #b90c2b);
+    animation: progress-bar-1 10s infinite ease;
    }
 
    .animation-bar-1 span:after {
@@ -44,4 +45,24 @@
                                      rgba(0, 0, 0, 0));
     background-size: 30px 30px;
     opacity: 0.3;
+    animation: progress-bar-after-1 0.5s infinite linear;
   }
+
+  @keyframes progress-bar-1 {
+    0% {
+      width: 20%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes progress-bar-after-1 {
+    0% {
+      background-position: 0 100%;
+    }
+    100% {
+      background-position: 30px 100%;
+    }
+  }
+
